@@ -13,7 +13,7 @@ pipeline {
 			}
 	    stage('Deploy the application') {
 			steps {
-				sh " pwd && cd chaperootodo_client && \
+				sh " pwd && cd chaperootodo_client &&  pwd &&\
                 . /home/jenkins/.profile && \
                 sudo docker-compose up -d"
 			}
