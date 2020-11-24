@@ -3,17 +3,17 @@ pipeline {
 	stages {
 		stage('Clone repo') {
 			steps{
-				sh "./scripts/clone-repo.sh"
+				sh "sudo ./scripts/clone-repo.sh"
 			}
 		}
 	    stage('Install Docker and Docker-Compose') {
 			steps {
-				sh "./scripts/install-docker.sh"
+				sh "sudo ./scripts/install-docker.sh"
 				}
 			}
 	    stage('Deploy the application') {
 			steps {
-				sh "./scripts/deploy-app.sh"
+				sh "sudo ./scripts/deploy-app.sh"
 			}
 	    }
 	}
